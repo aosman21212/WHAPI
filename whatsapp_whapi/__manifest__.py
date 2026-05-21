@@ -33,6 +33,13 @@ Maintainer: a.osman@bab.com.sa
     'support': 'abdzoro89@gmail.com',
     'maintainer': 'a.osman@bab.com.sa',
     'license': 'LGPL-3',
+    'images': [
+        'static/description/banner.png',
+        'static/description/icon.png',
+        'static/description/screenshot_inbox.png',
+        'static/description/screenshot_features.png',
+        'static/description/screenshot_channels.png',
+    ],
     'depends': ['base', 'web', 'mail'],
     'external_dependencies': {
         'python': ['requests'],
