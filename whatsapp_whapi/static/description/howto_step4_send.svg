@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" font-family="Arial,sans-serif">
+  <rect width="900" height="540" fill="#f0f2f5"/>
+  <defs><filter id="sh"><feDropShadow dx="0" dy="2" stdDeviation="6" flood-opacity="0.15"/></filter></defs>
+
+  <!-- Dimmed background (modal overlay) -->
+  <rect width="900" height="540" fill="rgba(0,0,0,0.4)"/>
+
+  <!-- Modal dialog -->
+  <rect x="200" y="40" width="500" height="460" rx="10" fill="white" filter="url(#sh)"/>
+
+  <!-- Modal header -->
+  <rect x="200" y="40" width="500" height="52" rx="10" fill="#075E54"/>
+  <rect x="200" y="72" width="500" height="20" fill="#075E54"/>
+  <text x="420" y="72" font-size="16" fill="white" text-anchor="middle" font-weight="bold">💬 Send WhatsApp Message</text>
+  <text x="688" y="72" font-size="20" fill="rgba(255,255,255,0.8)" text-anchor="end">✕</text>
+
+  <!-- Channel field -->
+  <text x="224" y="122" font-size="12" fill="#667781" font-weight="600">Channel *</text>
+  <rect x="224" y="130" width="452" height="34" rx="4" fill="white" stroke="#ddd" stroke-width="1"/>
+  <text x="240" y="151" font-size="13" fill="#333">📱 WhatsApp Main Line</text>
+  <text x="664" y="151" font-size="12" fill="#aaa" text-anchor="end">▼</text>
+
+  <!-- Recipient field -->
+  <text x="224" y="186" font-size="12" fill="#667781" font-weight="600">To (Chat ID / Phone) *</text>
+  <rect x="224" y="194" width="452" height="34" rx="4" fill="white" stroke="#25D366" stroke-width="2"/>
+  <text x="240" y="215" font-size="13" fill="#333">+966 55 336 8212</text>
+  <text x="224" y="238" font-size="10" fill="#667781">Enter phone number or Chat ID (e.g. 966553368212@s.whatsapp.net)</text>
+
+  <!-- Message type -->
+  <text x="224" y="262" font-size="12" fill="#667781" font-weight="600">Message Type</text>
+  <rect x="224" y="270" width="200" height="34" rx="4" fill="white" stroke="#ddd" stroke-width="1"/>
+  <text x="240" y="291" font-size="13" fill="#333">💬 Text</text>
+  <text x="410" y="291" font-size="12" fill="#aaa" text-anchor="end">▼</text>
+
+  <!-- Message Body -->
+  <text x="224" y="326" font-size="12" fill="#667781" font-weight="600">Message / Caption</text>
+  <rect x="224" y="334" width="452" height="80" rx="4" fill="white" stroke="#ddd" stroke-width="1"/>
+  <text x="240" y="356" font-size="13" fill="#333">Hello! Your order #SO-1042 is ready</text>
+  <text x="240" y="374" font-size="13" fill="#333">for pickup. Please visit us between</text>
+  <text x="240" y="392" font-size="13" fill="#333">9am - 5pm. Thank you! 🙏</text>
+  <text x="666" y="408" font-size="10" fill="#aaa" text-anchor="end">93 / 1000</text>
+
+  <!-- Media attachment (greyed out since Text type) -->
+  <text x="224" y="438" font-size="12" fill="#ccc" font-weight="600">Media File (optional for text)</text>
+  <rect x="224" y="446" width="452" height="34" rx="4" fill="#f8f8f8" stroke="#eee" stroke-width="1"/>
+  <text x="240" y="467" font-size="12" fill="#ccc">No media for text messages</text>
+
+  <!-- Footer buttons -->
+  <rect x="200" y="456" width="500" height="1" fill="#f0f0f0"/>
+  <rect x="224" y="466" width="130" height="34" rx="4" fill="#f8f9fa" stroke="#ddd" stroke-width="1"/>
+  <text x="289" y="487" font-size="13" fill="#666" text-anchor="middle">✕ Cancel</text>
+  <rect x="546" y="466" width="130" height="34" rx="4" fill="#25D366"/>
+  <text x="611" y="487" font-size="13" fill="white" text-anchor="middle" font-weight="bold">Send ➤</text>
+
+  <!-- Message type sidebar hint -->
+  <rect x="710" y="40" width="178" height="460" rx="8" fill="white" filter="url(#sh)"/>
+  <rect x="710" y="40" width="178" height="40" rx="8" fill="#128C7E"/>
+  <rect x="710" y="66" width="178" height="14" fill="#128C7E"/>
+  <text x="799" y="64" font-size="12" fill="white" text-anchor="middle" font-weight="bold">Message Types</text>
+
+  <text x="726" y="100" font-size="12" fill="#333">💬 Text</text>
+  <text x="726" y="120" font-size="12" fill="#333">🖼️ Image</text>
+  <text x="726" y="140" font-size="12" fill="#333">🎥 Video</text>
+  <text x="726" y="160" font-size="12" fill="#333">📄 Document</text>
+  <text x="726" y="180" font-size="12" fill="#333">🎵 Audio</text>
+  <text x="726" y="200" font-size="12" fill="#333">🎙️ Voice</text>
+  <text x="726" y="220" font-size="12" fill="#333">🌍 Location</text>
+  <text x="726" y="240" font-size="12" fill="#333">📊 Poll</text>
+  <text x="726" y="260" font-size="12" fill="#333">🔗 Link Preview</text>
+  <text x="726" y="280" font-size="12" fill="#333">👤 Contact</text>
+  <text x="726" y="300" font-size="12" fill="#333">🎠 Carousel</text>
+  <text x="726" y="320" font-size="12" fill="#333">⚡ Interactive</text>
+  <text x="726" y="340" font-size="12" fill="#333">🎞️ GIF</text>
+  <text x="726" y="360" font-size="12" fill="#333">🌟 Story</text>
+
+  <!-- Step label -->
+  <rect x="0" y="520" width="900" height="20" fill="#e8f5e9"/>
+  <text x="450" y="533" font-size="11" fill="#2e7d32" text-anchor="middle">STEP 4 — WhatsApp › Send Message · Choose channel, enter phone number, select type, write message · Click Send</text>
+</svg>

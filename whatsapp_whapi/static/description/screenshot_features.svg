@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="900" height="420">
+  <defs>
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#25D366;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#128C7E;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#34B7F1;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#075E54;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="cardGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#c0392b;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="cardGrad4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8E44AD;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#6C3483;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="420" fill="#f8f9fa" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="44" font-family="Arial" font-size="22" fill="#075E54" font-weight="bold" text-anchor="middle">Key Features</text>
+  <line x1="200" y1="54" x2="700" y2="54" stroke="#25D366" stroke-width="2"/>
+
+  <!-- Feature Card 1: Inbox -->
+  <rect x="20" y="70" width="200" height="320" rx="12" fill="url(#cardGrad1)" opacity="0.95"/>
+  <text x="120" y="116" font-family="Arial" font-size="32" text-anchor="middle">💬</text>
+  <text x="120" y="148" font-family="Arial" font-size="15" fill="white" font-weight="bold" text-anchor="middle">Inbox Manager</text>
+  <text x="120" y="172" font-family="Arial" font-size="11" fill="rgba(255,255,255,0.9)" text-anchor="middle">Real-time chat inbox</text>
+  <text x="120" y="190" font-family="Arial" font-size="11" fill="rgba(255,255,255,0.9)" text-anchor="middle">with all your contacts</text>
+  <!-- Mini features -->
+  <text x="36" y="218" font-family="Arial" font-size="11" fill="white">✓ Send &amp; receive messages</text>
+  <text x="36" y="238" font-family="Arial" font-size="11" fill="white">✓ Image, video, audio</text>
+  <text x="36" y="258" font-family="Arial" font-size="11" fill="white">✓ Documents &amp; files</text>
+  <text x="36" y="278" font-family="Arial" font-size="11" fill="white">✓ Location sharing</text>
+  <text x="36" y="298" font-family="Arial" font-size="11" fill="white">✓ Polls &amp; interactive</text>
+  <text x="36" y="318" font-family="Arial" font-size="11" fill="white">✓ Message status</text>
+  <text x="36" y="338" font-family="Arial" font-size="11" fill="white">✓ Reply &amp; forward</text>
+
+  <!-- Feature Card 2: Contacts & Groups -->
+  <rect x="238" y="70" width="200" height="320" rx="12" fill="url(#cardGrad2)" opacity="0.95"/>
+  <text x="338" y="116" font-family="Arial" font-size="32" text-anchor="middle">👥</text>
+  <text x="338" y="148" font-family="Arial" font-size="15" fill="white" font-weight="bold" text-anchor="middle">Contacts &amp; Groups</text>
+  <text x="338" y="172" font-family="Arial" font-size="11" fill="rgba(255,255,255,0.9)" text-anchor="middle">Manage all WhatsApp</text>
+  <text x="338" y="190" font-family="Arial" font-size="11" fill="rgba(255,255,255,0.9)" text-anchor="middle">contacts and groups</text>
+  <text x="254" y="218" font-family="Arial" font-size="11" fill="white">✓ Sync contacts list</text>
+  <text x="254" y="238" font-family="Arial" font-size="11" fill="white">✓ Phone validation</text>
+  <text x="254" y="258" font-family="Arial" font-size="11" fill="white">✓ Group management</text>
+  <text x="254" y="278" font-family="Arial" font-size="11" fill="white">✓ Participants list</text>
+  <text x="254" y="298" font-family="Arial" font-size="11" fill="white">✓ Join / Leave groups</text>
+  <text x="254" y="318" font-family="Arial" font-size="11" fill="white">✓ Group invites</text>
+  <text x="254" y="338" font-family="Arial" font-size="11" fill="white">✓ Presence status</text>
+
+  <!-- Feature Card 3: Business Catalog -->
+  <rect x="456" y="70" width="200" height="320" rx="12" fill="url(#cardGrad3)" opacity="0.95"/>
+  <text x="556" y="116" font-family="Arial" font-size="32" text-anchor="middle">🛍️</text>
+  <text x="556" y="148" font-family="Arial" font-size="15" fill="white" font-weight="bold" text-anchor="middle">Business Catalog</text>
+  <text x="556" y="172" font-family="Arial" font-size="11" fill="rgba(255,255,255,0.9)" text-anchor="middle">Full WhatsApp Business</text>
+  <text x="556" y="190" font-family="Arial" font-size="11" fill="rgba(255,255,255,0.9)" text-anchor="middle">catalog integration</text>
+  <text x="472" y="218" font-family="Arial" font-size="11" fill="white">✓ Products catalog</text>
+  <text x="472" y="238" font-family="Arial" font-size="11" fill="white">✓ Collections</text>
+  <text x="472" y="258" font-family="Arial" font-size="11" fill="white">✓ Orders management</text>
+  <text x="472" y="278" font-family="Arial" font-size="11" fill="white">✓ Send products</text>
+  <text x="472" y="298" font-family="Arial" font-size="11" fill="white">✓ Newsletters</text>
+  <text x="472" y="318" font-family="Arial" font-size="11" fill="white">✓ Media library</text>
+  <text x="472" y="338" font-family="Arial" font-size="11" fill="white">✓ API logs &amp; debug</text>
+
+  <!-- Feature Card 4: Multi-channel -->
+  <rect x="674" y="70" width="206" height="320" rx="12" fill="url(#cardGrad4)" opacity="0.95"/>
+  <text x="777" y="116" font-family="Arial" font-size="32" text-anchor="middle">⚡</text>
+  <text x="777" y="148" font-family="Arial" font-size="15" fill="white" font-weight="bold" text-anchor="middle">Multi-Channel</text>
+  <text x="777" y="172" font-family="Arial" font-size="11" fill="rgba(255,255,255,0.9)" text-anchor="middle">Manage multiple</text>
+  <text x="777" y="190" font-family="Arial" font-size="11" fill="rgba(255,255,255,0.9)" text-anchor="middle">WhatsApp numbers</text>
+  <text x="690" y="218" font-family="Arial" font-size="11" fill="white">✓ Multiple channels</text>
+  <text x="690" y="238" font-family="Arial" font-size="11" fill="white">✓ Webhook support</text>
+  <text x="690" y="258" font-family="Arial" font-size="11" fill="white">✓ Auto sync (cron)</text>
+  <text x="690" y="278" font-family="Arial" font-size="11" fill="white">✓ QR code login</text>
+  <text x="690" y="298" font-family="Arial" font-size="11" fill="white">✓ Role-based access</text>
+  <text x="690" y="318" font-family="Arial" font-size="11" fill="white">✓ Whapi.Cloud API</text>
+  <text x="690" y="338" font-family="Arial" font-size="11" fill="white">✓ Odoo 19 native</text>
+</svg>

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #fff;
+        }
+
+        /* ── Hero Banner ── */
+        .hero {
+            background: linear-gradient(135deg, #075E54 0%, #128C7E 50%, #25D366 100%);
+            padding: 48px 40px;
+            text-align: center;
+            color: white;
+        }
+        .hero-logo {
+            width: 96px;
+            height: 96px;
+            margin: 0 auto 20px;
+            display: block;
+        }
+        .hero h1 {
+            font-size: 36px;
+            margin: 0 0 8px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+        .hero h2 {
+            font-size: 18px;
+            margin: 0 0 20px;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+        .hero-badges {
+            display: inline-flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .badge {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.4);
+            border-radius: 20px;
+            padding: 5px 14px;
+            font-size: 13px;
+            color: white;
+        }
+
+        /* ── Sections ── */
+        .section {
+            padding: 40px 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #075E54;
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #25D366;
+            display: inline-block;
+        }
+        .section p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* ── Screenshot container ── */
+        .screenshot-wrap {
+            background: #f0f2f5;
+            border-radius: 12px;
+            padding: 16px;
+            margin: 20px 0;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .screenshot-wrap img,
+        .screenshot-wrap object {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+        }
+        .screenshot-caption {
+            font-size: 13px;
+            color: #667781;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* ── Feature grid ── */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 24px;
+        }
+        .feature-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            border-left: 4px solid #25D366;
+        }
+        .feature-card .icon {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .feature-card h4 {
+            margin: 0 0 8px;
+            font-size: 15px;
+            color: #075E54;
+        }
+        .feature-card p {
+            margin: 0;
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* ── Steps ── */
+        .steps {
+            counter-reset: step;
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .steps li {
+            counter-increment: step;
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 18px;
+            gap: 16px;
+        }
+        .steps li::before {
+            content: counter(step);
+            min-width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #25D366;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .steps li .step-text strong {
+            display: block;
+            color: #075E54;
+            margin-bottom: 3px;
+        }
+        .steps li .step-text span {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* ── Info table ── */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            font-size: 14px;
+        }
+        .info-table td {
+            padding: 10px 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .info-table td:first-child {
+            color: #667781;
+            width: 160px;
+            font-weight: 600;
+        }
+        .info-table td:last-child a {
+            color: #25D366;
+            text-decoration: none;
+        }
+
+        /* ── How-to steps ── */
+        .howto-step {
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+            margin-bottom: 48px;
+        }
+        .howto-step-number {
+            min-width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #075E54, #25D366);
+            color: white;
+            font-size: 20px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(37,211,102,0.3);
+        }
+        .howto-step-content {
+            flex: 1;
+        }
+        .howto-step-content h3 {
+            margin: 0 0 6px;
+            font-size: 18px;
+            color: #075E54;
+        }
+        .howto-step-content p {
+            margin: 0 0 14px;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+        .howto-step-content code {
+            background: #f0f2f5;
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-size: 12px;
+            color: #075E54;
+        }
+        .tip-box {
+            background: #e8f5e9;
+            border-left: 4px solid #25D366;
+            border-radius: 6px;
+            padding: 12px 16px;
+            font-size: 13px;
+            color: #2e7d32;
+            margin-top: 10px;
+        }
+        .tip-box strong { color: #1b5e20; }
+
+        /* ── Divider ── */
+        .divider {
+            border: none;
+            border-top: 1px solid #f0f0f0;
+            margin: 0 40px;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            background: #075E54;
+            color: rgba(255,255,255,0.85);
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+        }
+        .footer a {
+            color: #25D366;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<div class="hero">
+    <img class="hero-logo"
+         src="/whatsapp_whapi/static/description/icon.png"
+         alt="WhatsApp Whapi Logo"/>
+    <h1>WhatsApp Whapi</h1>
+    <h2>Full WhatsApp Integration for Odoo 19 via Whapi.Cloud</h2>
+    <div class="hero-badges">
+        <span class="badge">✅ Odoo 19.0</span>
+        <span class="badge">💬 Send &amp; Receive</span>
+        <span class="badge">📦 Business Catalog</span>
+        <span class="badge">👥 Contacts &amp; Groups</span>
+        <span class="badge">⚡ Webhooks</span>
+        <span class="badge">🔑 Multi-Channel</span>
+    </div>
+</div>
+
+<!-- ═══════════════════ OVERVIEW ═══════════════════ -->
+<div class="section">
+    <div class="section-title">Overview</div>
+    <p>
+        <strong>WhatsApp Whapi</strong> brings a complete, standalone WhatsApp inbox directly into Odoo 19.
+        Powered by the <a href="https://whapi.cloud" style="color:#25D366;">Whapi.Cloud</a> REST API,
+        this module lets you send and receive WhatsApp messages, manage contacts, groups, media,
+        newsletters, and your full WhatsApp Business catalog — all without leaving Odoo.
+    </p>
+    <p>
+        Whether you run a sales team, a support desk, or an e-commerce business, WhatsApp Whapi
+        centralises all your WhatsApp communication inside Odoo with real-time webhook updates,
+        automatic chat synchronisation, and role-based access control.
+    </p>
+</div>
+
+<hr class="divider"/>
+
+<!-- ═══════════════════ SCREENSHOT 1 — INBOX ═══════════════════ -->
+<div class="section">
+    <div class="section-title">WhatsApp Inbox</div>
+    <p>
+        A dedicated inbox view lets you switch between conversations, read and send messages of
+        any type (text, image, video, document, location, poll, interactive…) and see real-time
+        delivery status — all inside Odoo.
+    </p>
+    <div class="screenshot-wrap">
+        <img src="/whatsapp_whapi/static/description/screenshot_inbox.svg"
+             alt="WhatsApp Inbox Screenshot"/>
+        <div class="screenshot-caption">
+            📥 Real-time WhatsApp inbox — chat list on the left, conversation on the right
+        </div>
+    </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- ═══════════════════ SCREENSHOT 2 — FEATURES ═══════════════════ -->
+<div class="section">
+    <div class="section-title">Feature Highlights</div>
+    <div class="screenshot-wrap">
+        <img src="/whatsapp_whapi/static/description/screenshot_features.svg"
+             alt="WhatsApp Whapi Features"/>
+        <div class="screenshot-caption">
+            ⚡ Four pillars: Inbox, Contacts &amp; Groups, Business Catalog, and Multi-Channel management
+        </div>
+    </div>
+
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="icon">💬</div>
+            <h4>Rich Messaging</h4>
+            <p>Text, images, videos, audio, documents, stickers, locations, polls, carousels and interactive buttons.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">👥</div>
+            <h4>Contacts &amp; Groups</h4>
+            <p>Sync your WhatsApp contacts list, validate phone numbers, manage groups and participants.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🛍️</div>
+            <h4>Business Catalog</h4>
+            <p>Sync products, collections, and orders from your WhatsApp Business catalog directly into Odoo.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📰</div>
+            <h4>Newsletters</h4>
+            <p>Manage WhatsApp Channels (newsletters), subscribe/unsubscribe, and track subscriber counts.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">⚡</div>
+            <h4>Webhooks &amp; Auto-sync</h4>
+            <p>Incoming messages arrive instantly via webhook. Scheduled cron jobs keep chats and contacts up-to-date.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🔑</div>
+            <h4>Multi-Channel &amp; RBAC</h4>
+            <p>Connect multiple WhatsApp numbers. Assign channels to teams with WhatsApp User / Manager roles.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📋</div>
+            <h4>API Logs</h4>
+            <p>Full audit trail of every API call for debugging and compliance. Accessible to managers only.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📱</div>
+            <h4>QR Code Login</h4>
+            <p>Scan a QR code directly from Odoo to link your WhatsApp number via the Whapi.Cloud session.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🖼️</div>
+            <h4>Media Library</h4>
+            <p>Upload, store and reuse media files. Attach Odoo ir.attachment files to outgoing messages.</p>
+        </div>
+    </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- ═══════════════════ SCREENSHOT 3 — CHANNELS ═══════════════════ -->
+<div class="section">
+    <div class="section-title">Channel Configuration</div>
+    <p>
+        Each WhatsApp number is represented as a <strong>Channel</strong> in Odoo. Simply paste your
+        Whapi.Cloud API token, set the webhook URL in the Whapi dashboard, and you're live.
+    </p>
+    <div class="screenshot-wrap">
+        <img src="/whatsapp_whapi/static/description/screenshot_channels.svg"
+             alt="WhatsApp Channel Configuration Screenshot"/>
+        <div class="screenshot-caption">
+            🔧 Configuration → Channels — add multiple WhatsApp numbers and monitor their connection status
+        </div>
+    </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- ═══════════════════ HOW TO USE ═══════════════════ -->
+<div class="section">
+    <div class="section-title">How to Use — Step-by-Step Guide</div>
+    <p>Follow these 5 steps to get WhatsApp running inside Odoo in under 10 minutes.</p>
+
+    <!-- STEP 1 -->
+    <div class="howto-step">
+        <div class="howto-step-number">1</div>
+        <div class="howto-step-content">
+            <h3>Create a Whapi.Cloud account &amp; get your API Token</h3>
+            <p>
+                Sign up at <a href="https://whapi.cloud" style="color:#25D366;">whapi.cloud</a>, create a new
+                <strong>instance</strong> for your WhatsApp number, and copy your <strong>API Token</strong>
+                from the instance dashboard. You'll also need the base URL: <code>https://gate.whapi.cloud</code>.
+            </p>
+            <div class="tip-box">
+                💡 <strong>Tip:</strong> Whapi.Cloud offers a free trial — no credit card needed to get started.
+                Your token looks like: <code>BIdaZZimJdGy…</code>
+            </div>
+            <div class="screenshot-wrap" style="margin-top:16px;">
+                <img src="/whatsapp_whapi/static/description/howto_step1_channel.svg"
+                     alt="Step 1 – Channel Configuration Form"/>
+                <div class="screenshot-caption">
+                    📋 WhatsApp › Configuration › Channels › New — enter name and paste your API token
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="howto-step">
+        <div class="howto-step-number">2</div>
+        <div class="howto-step-content">
+            <h3>Create a Channel in Odoo &amp; Configure the Webhook</h3>
+            <p>
+                Go to <strong>WhatsApp → Configuration → Channels → New</strong>.
+                Enter a name, paste your API token, and click <strong>Save</strong>.
+                Then click <strong>⚡ Register Webhook</strong> — Odoo will automatically push the webhook URL
+                to Whapi.Cloud so all incoming messages arrive in real time.
+                Alternatively, copy the Webhook URL manually and paste it in your Whapi.Cloud instance settings.
+            </p>
+            <div class="tip-box">
+                💡 <strong>Tip:</strong> Enable all webhook events in Whapi.Cloud: <code>messages</code>,
+                <code>statuses</code>, <code>chats</code>, <code>contacts</code>, <code>groups</code>,
+                <code>presences</code> for full sync.
+            </div>
+            <div class="screenshot-wrap" style="margin-top:16px;">
+                <img src="/whatsapp_whapi/static/description/howto_step2_webhook.svg"
+                     alt="Step 2 – Webhook Configuration"/>
+                <div class="screenshot-caption">
+                    ⚡ Copy Webhook URL from Odoo › Paste in Whapi.Cloud dashboard › Enable all events › Save
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="howto-step">
+        <div class="howto-step-number">3</div>
+        <div class="howto-step-content">
+            <h3>Open the Inbox &amp; Read / Reply to Messages</h3>
+            <p>
+                Navigate to <strong>WhatsApp → Chats</strong> (or click <strong>Open Inbox</strong> from the
+                channel form). The left panel shows all your conversations — click any chat to open it.
+                The right panel shows the full message history with delivery status (✓ sent, ✓✓ delivered,
+                ✓✓ blue = read). Type a message at the bottom and press <strong>Enter</strong> or the
+                send button <strong>➤</strong> to reply.
+            </p>
+            <div class="tip-box">
+                💡 <strong>Tip:</strong> Unread message counts appear as green badges on each chat.
+                Images, videos, and documents sent by contacts appear inline in the conversation.
+            </div>
+            <div class="screenshot-wrap" style="margin-top:16px;">
+                <img src="/whatsapp_whapi/static/description/howto_step3_inbox.svg"
+                     alt="Step 3 – WhatsApp Inbox"/>
+                <div class="screenshot-caption">
+                    💬 WhatsApp › Chats — chat list on the left, full conversation on the right with composer at bottom
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="howto-step">
+        <div class="howto-step-number">4</div>
+        <div class="howto-step-content">
+            <h3>Send a New Message (any type)</h3>
+            <p>
+                Go to <strong>WhatsApp → Send Message</strong> to open the composer wizard.
+                Select the channel, enter the recipient's phone number or WhatsApp Chat ID, choose the
+                <strong>message type</strong> (text, image, video, document, audio, location, poll,
+                link preview, interactive, carousel…), write your message, and click <strong>Send ➤</strong>.
+            </p>
+            <p>
+                <strong>Phone format:</strong> Enter the number with country code (e.g. <code>966553368212</code>)
+                — Odoo will automatically format it as a WhatsApp Chat ID.
+                You can also paste a full Chat ID like <code>966553368212@s.whatsapp.net</code>.
+            </p>
+            <div class="tip-box">
+                💡 <strong>Tip:</strong> You can also reply to any message by opening it in
+                <strong>WhatsApp → Messages</strong> and clicking the <strong>Reply</strong> button on the record.
+            </div>
+            <div class="screenshot-wrap" style="margin-top:16px;">
+                <img src="/whatsapp_whapi/static/description/howto_step4_send.svg"
+                     alt="Step 4 – Send Message Wizard"/>
+                <div class="screenshot-caption">
+                    ✉️ WhatsApp › Send Message — choose type, enter recipient, compose message, click Send
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- STEP 5 -->
+    <div class="howto-step">
+        <div class="howto-step-number">5</div>
+        <div class="howto-step-content">
+            <h3>Sync Contacts, Groups &amp; Monitor Logs</h3>
+            <p>
+                From the <strong>Channel form</strong>, click <strong>Sync Contacts</strong> or
+                <strong>Sync Groups</strong> to import your WhatsApp contacts and group chats into Odoo.
+                These are also available in the menu under <strong>WhatsApp → Contacts</strong> and
+                <strong>WhatsApp → Groups &amp; Media → Groups</strong>.
+            </p>
+            <p>
+                Automated cron jobs keep your chats updated every 15 minutes.
+                Go to <strong>WhatsApp → Configuration → API Logs</strong> to audit every API call —
+                useful for debugging failed messages or rate-limit issues.
+            </p>
+            <div class="tip-box">
+                💡 <strong>Tip:</strong> Use <strong>Configuration → Check Phones</strong> to validate
+                whether a phone number has an active WhatsApp account before sending.
+                Use the <strong>📱 QR Login</strong> button if your session is not connected yet.
+            </div>
+            <div class="screenshot-wrap" style="margin-top:16px;">
+                <img src="/whatsapp_whapi/static/description/howto_step5_sync.svg"
+                     alt="Step 5 – Contacts, Groups and API Logs"/>
+                <div class="screenshot-caption">
+                    🔄 Sync contacts &amp; groups · view API logs · validate phone numbers · QR login
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- ═══════════════════ SETUP GUIDE (QUICK REFERENCE) ═══════════════════ -->
+<div class="section">
+    <div class="section-title">Quick Setup Checklist</div>
+    <ol class="steps">
+        <li>
+            <div class="step-text">
+                <strong>Sign up at Whapi.Cloud</strong>
+                <span>Create an instance → copy your API token from the dashboard.</span>
+            </div>
+        </li>
+        <li>
+            <div class="step-text">
+                <strong>Install this module in Odoo</strong>
+                <span>Apps → WhatsApp Whapi → Install (or <code>odoo-bin -i whatsapp_whapi</code>).</span>
+            </div>
+        </li>
+        <li>
+            <div class="step-text">
+                <strong>Create a Channel</strong>
+                <span>WhatsApp → Configuration → Channels → New → paste token → Save.</span>
+            </div>
+        </li>
+        <li>
+            <div class="step-text">
+                <strong>Register the Webhook</strong>
+                <span>Click <strong>⚡ Register Webhook</strong> on the channel form. Enable all events in Whapi dashboard.</span>
+            </div>
+        </li>
+        <li>
+            <div class="step-text">
+                <strong>Start messaging!</strong>
+                <span>WhatsApp → Chats for the inbox, WhatsApp → Send Message to start a new conversation.</span>
+            </div>
+        </li>
+    </ol>
+</div>
+
+<hr class="divider"/>
+
+<!-- ═══════════════════ MODULE INFO ═══════════════════ -->
+<div class="section">
+    <div class="section-title">Module Information</div>
+    <table class="info-table">
+        <tr>
+            <td>Version</td>
+            <td>19.0.1.0.0</td>
+        </tr>
+        <tr>
+            <td>Category</td>
+            <td>Productivity</td>
+        </tr>
+        <tr>
+            <td>License</td>
+            <td>LGPL-3</td>
+        </tr>
+        <tr>
+            <td>Dependencies</td>
+            <td>base, web, mail</td>
+        </tr>
+        <tr>
+            <td>External API</td>
+            <td><a href="https://whapi.cloud">Whapi.Cloud (gate.whapi.cloud)</a></td>
+        </tr>
+        <tr>
+            <td>Author</td>
+            <td><a href="https://leapai.ai/en/">leapai.ai</a></td>
+        </tr>
+        <tr>
+            <td>Maintainer</td>
+            <td><a href="mailto:a.osman@bab.com.sa">a.osman@bab.com.sa</a></td>
+        </tr>
+        <tr>
+            <td>Support</td>
+            <td><a href="mailto:abdzoro89@gmail.com">abdzoro89@gmail.com</a></td>
+        </tr>
+    </table>
+</div>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<div class="footer">
+    Built with ❤️ by <a href="https://leapai.ai/en/">leapai.ai</a> ·
+    Powered by <a href="https://whapi.cloud">Whapi.Cloud</a> ·
+    For Odoo 19.0
+</div>
+
+</body>
+</html>
